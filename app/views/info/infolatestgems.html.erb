@@ -1,0 +1,28 @@
+<h1>Info#infolatestgems</h1>
+<p>Find me in app/views/info/infolatestgems.html.erb</p>
+<h3>Latest Gems</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Gem Name</th>
+      <th>Version</th>
+      <th>Info</th>
+      <th>Project URI</th>
+      <th># Total Downloads</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <% @latest.each do |result| %>
+        <td><%= result["name"] %></td>
+        <td><%= result["version"] %></td>
+        <td><%= result["info"] %></td>
+        <td><%= result["project_uri"] %></td>
+        <td><%= result["downloads"] %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+<br>
+<%= link_to 'Home', root_path %>
